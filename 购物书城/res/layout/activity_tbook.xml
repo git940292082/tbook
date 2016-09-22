@@ -1,0 +1,35 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TbookActivity" 
+    >
+ <RadioGroup
+        android:id="@+id/main_groaup"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:background="@color/Conlor.Main"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/radio1"
+            style="@style/MainBtGroup"
+            android:checked="true"
+            android:drawableTop="@drawable/select_rd1"
+            android:text="书城 "/>
+
+        <RadioButton
+            android:id="@+id/radio2"
+            style="@style/MainBtGroup"
+            android:drawableTop="@drawable/select_rd2"
+            android:text="购物车" />
+
+        <RadioButton
+            android:id="@+id/radio3"
+            style="@style/MainBtGroup"
+            android:drawableTop="@drawable/select_rd3"
+            android:text="我的" />
+    </RadioGroup>
+</RelativeLayout>
