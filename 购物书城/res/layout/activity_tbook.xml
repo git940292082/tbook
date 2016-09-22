@@ -4,6 +4,9 @@
     android:layout_height="match_parent"
     tools:context=".TbookActivity" 
     >
+    <include layout="@layout/title" />
+    
+    
  <RadioGroup
         android:id="@+id/main_groaup"
         android:layout_width="match_parent"
@@ -11,7 +14,8 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:background="@color/Conlor.Main"
-        android:orientation="horizontal" >
+        android:orientation="horizontal" 
+        >
 
         <RadioButton
             android:id="@+id/radio1"
