@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <include layout="@layout/title" />
+
+        <RelativeLayout
+            android:id="@+id/shouye_rl_title"
+            android:layout_width="match_parent"
+            android:layout_height="50dp" >
+
+            <EditText
+                android:id="@+id/shouye_ed_search"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toLeftOf="@+id/shouye_bt_fenlei"
+                android:background="@drawable/shouye_bg_input"
+                android:drawableRight="@drawable/shouye_ico_search"
+                android:gravity="center_vertical"
+                android:hint="请输入关键字"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/shouye_bt_fenlei"
+                android:layout_width="70dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="10dp"
+                android:background="@null"
+                android:drawableRight="@drawable/shouye_arrow_down"
+                android:text="分类"
+                android:textColor="#fff"
+                android:textSize="16sp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/shouye_rl_title"
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp" >
+
+            <!-- 推荐 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/shouye_tuijian_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="7"
+                    android:text="编辑推荐"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/shouye_tuijian_more"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="更多" />
+            </LinearLayout>
+
+            <GridView
+                android:id="@+id/shouye_tuijian_gl"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/shouye_bg_pull"
+                android:listSelector="@android:color/transparent"
+                android:numColumns="4" />
+            <!-- 热销 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/shouye_rexiao_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="7"
+                    android:text="热销图书"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/shouye_rexiao_more"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="更多" />
+            </LinearLayout>
+
+            <GridView
+                android:id="@+id/shouye_zuixin_gl"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/shouye_bg_pull"
+                android:listSelector="@android:color/transparent"
+                android:numColumns="4" />
+ 			<!-- 最新-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/shouye_zuixin_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="7"
+                    android:text="最新上架"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/shouye_zuixin_more"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="更多" />
+            </LinearLayout>
+
+            <GridView
+                android:id="@+id/shouye_zuixin_gl"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/shouye_bg_pull"
+                android:listSelector="@android:color/transparent"
+                android:numColumns="4" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</ScrollView>
