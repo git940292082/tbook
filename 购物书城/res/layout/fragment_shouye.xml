@@ -82,7 +82,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="140dp"
                 android:layout_marginTop="10dp"
-                android:background="@drawable/shouye_bg_pull"
                 android:listSelector="@android:color/transparent"
                 android:numColumns="4" />
             <!-- 热销 -->
@@ -111,11 +110,10 @@
             </LinearLayout>
 
             <GridView
-                android:id="@+id/shouye_zuixin_gl"
+                android:id="@+id/shouye_rexiao_gl"
                 android:layout_width="match_parent"
                 android:layout_height="140dp"
                 android:layout_marginTop="10dp"
-                android:background="@drawable/shouye_bg_pull"
                 android:listSelector="@android:color/transparent"
                 android:numColumns="4" />
  			<!-- 最新-->
@@ -147,7 +145,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="140dp"
                 android:layout_marginTop="10dp"
-                android:background="@drawable/shouye_bg_pull"
                 android:listSelector="@android:color/transparent"
                 android:numColumns="4" />
         </LinearLayout>
