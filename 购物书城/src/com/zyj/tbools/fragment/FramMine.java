@@ -12,15 +12,22 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.View.OnClickListener;
 import android.widget.ImageView;
+import android.widget.TextView;
 
+import com.zyj.tbools.App;
 import com.zyj.tbools.R;
+import com.zyj.tbools.activity.AddressActivity;
 import com.zyj.tbools.activity.LoginActivity;
 
 public class FramMine extends Fragment implements OnClickListener {
 	private View view;
-	
+
 	@ViewInject(R.id.ivPhoto)
 	ImageView ivPhoto;
+	@ViewInject(R.id.tvTotalDesc)
+	TextView tvTotalDesc;
+	@ViewInject(R.id.tvNickname)
+	TextView tvNickname;
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
@@ -30,7 +37,8 @@ public class FramMine extends Fragment implements OnClickListener {
 			x.view().inject(this,view);
 			//初始数据在这里写
 			ivPhoto.setOnClickListener(this);
-			
+			tvTotalDesc.setOnClickListener(this);
+
 		}else{
 			((ViewGroup) view.getParent()).removeView(view); 
 		}
@@ -40,6 +48,23 @@ public class FramMine extends Fragment implements OnClickListener {
 	@Override
 	public void onClick(View v) {
 		// TODO Auto-generated method stub
-		startActivity(new Intent(getActivity(),LoginActivity.class));
+		switch (v.getId()) {
+		case R.id.ivPhoto:
+			if(!App.isLogin){
+				startActivity(new Intent(getActivity(),LoginActivity.class));
+			}
+			break;
+		case R.id.tvTotalDesc:
+			startActivity(new Intent(getActivity(),AddressActivity.class));
+			break;
+		}
+	}
+	@Override
+	public void onResume() {
+		// TODO Auto-generated method stub
+		super.onResume();
+		if(App.user!=null){
+			tvNickname.setText(App.user.getNickname());
+		}
 	}
 }

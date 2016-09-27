@@ -33,6 +33,7 @@
         </activity>
         <activity android:name="com.zyj.tbools.activity.RegisterActivity" >
         </activity>
+        <activity android:name="com.zyj.tbools.activity.AddressActivity"></activity>
     </application>
 
 </manifest>

@@ -43,5 +43,78 @@ public class User {
 				+ ", id=" + id + ", lastLoginIp=" + lastLoginIp + ", lastLoginTime=" + lastLoginTime + ", nickname="
 				+ nickname + ", password=" + password + ", userIntegral=" + userIntegral + "]";
 	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public boolean isEmailVerify() {
+		return emailVerify;
+	}
+
+	public void setEmailVerify(boolean emailVerify) {
+		this.emailVerify = emailVerify;
+	}
+
+	public String getEmailVerifyCode() {
+		return emailVerifyCode;
+	}
+
+	public void setEmailVerifyCode(String emailVerifyCode) {
+		this.emailVerifyCode = emailVerifyCode;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getLastLoginIp() {
+		return lastLoginIp;
+	}
+
+	public void setLastLoginIp(String lastLoginIp) {
+		this.lastLoginIp = lastLoginIp;
+	}
+
+	public double getLastLoginTime() {
+		return lastLoginTime;
+	}
+
+	public void setLastLoginTime(double lastLoginTime) {
+		this.lastLoginTime = lastLoginTime;
+	}
+
+	public String getNickname() {
+		return nickname;
+	}
+
+	public void setNickname(String nickname) {
+		this.nickname = nickname;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	public int getUserIntegral() {
+		return userIntegral;
+	}
+
+	public void setUserIntegral(int userIntegral) {
+		this.userIntegral = userIntegral;
+	}
+	
 	
 }

@@ -1,15 +1,11 @@
 package com.zyj.tbools.model;
 
 import java.util.Map;
-
 import org.json.JSONException;
 import org.json.JSONObject;
-
 import android.graphics.Bitmap;
 import android.graphics.Bitmap.Config;
 import android.util.Log;
-import android.widget.ImageView;
-
 import com.android.volley.Request;
 import com.android.volley.Response.ErrorListener;
 import com.android.volley.Response.Listener;
@@ -21,15 +17,12 @@ import com.android.volley.toolbox.ImageRequest;
 import com.android.volley.toolbox.StringRequest;
 import com.google.gson.Gson;
 import com.zyj.tbools.App;
-import com.zyj.tbools.activity.LoginActivity;
 import com.zyj.tbools.entity.User;
 import com.zyj.tbools.untils.CommonRequest;
 import com.zyj.tbools.untils.GlobalConsts;
-
-public class UserModel {
+public class UserModel{
 	public void login(final Map<String, String> maplogin,String url,final IEntittyCallBack callBack){
-		StringRequest request=new StringRequest(Request.Method.POST,url,new Listener<String>() {
-			
+		CommonRequest request=new CommonRequest(Request.Method.POST,url,new Listener<String>() {
 			
 			@Override
 			public void onResponse(String response) {
@@ -56,7 +49,7 @@ public class UserModel {
 			@Override
 			public void onErrorResponse(VolleyError error) {
 				// TODO Auto-generated method stub
-
+				
 			}
 		}){
 			@Override
@@ -67,6 +60,7 @@ public class UserModel {
 		};
 		App.queue.add(request);
 	}
+	
 	public void register(String url,final Map<String , String> mapRegist,final IEntittyCallBack callBack){
 		CommonRequest request=new CommonRequest(Request.Method.POST, url,
 				new Listener<String>() {
@@ -89,7 +83,6 @@ public class UserModel {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
-
 			}
 		},null){
 			@Override

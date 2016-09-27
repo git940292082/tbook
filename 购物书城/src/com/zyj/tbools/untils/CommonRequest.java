@@ -41,13 +41,6 @@ public class CommonRequest extends StringRequest{
 		if(JSESSIONID!=null) {
 			headers.put("Cookie", JSESSIONID);
 		}
-		//判断sharepreference中是否存有cart信息  有的话则�?��发�?数据
-		SharedPreferences pref = App.context.getSharedPreferences("cart", Context.MODE_PRIVATE);
-		String cart=pref.getString("cart", null);
-		if(cart!=null){
-			String cookie=headers.get("Cookie");
-			headers.put("Cookie", cookie==null ? cart:cookie+", cart="+cart);
-		}
 		return headers;
 	}
 

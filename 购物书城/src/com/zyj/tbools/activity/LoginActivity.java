@@ -7,6 +7,7 @@ import java.util.Map;
 import org.xutils.x;
 import org.xutils.view.annotation.ViewInject;
 
+import com.zyj.tbools.App;
 import com.zyj.tbools.R;
 import com.zyj.tbools.entity.User;
 import com.zyj.tbools.presenter.UserPersenter;
@@ -66,7 +67,6 @@ public class LoginActivity extends Activity implements ILoginView{
 			}
 		});
 	}
-	
 	protected void login() {
 		// TODO Auto-generated method stub
 		Map<String , String> maplogin=new HashMap<String, String>();
@@ -81,9 +81,12 @@ public class LoginActivity extends Activity implements ILoginView{
 	@Override
 	public void loginOk(User user) {
 		// TODO Auto-generated method stub
+		finish();
+		App.user=user;
+		App.isLogin=true;
 		Toast.makeText(this, "µÇÂ½³É¹¦", 0).show();
+		
 	}
-
 	@Override
 	public void loginErr(String msg) {
 		// TODO Auto-generated method stub
