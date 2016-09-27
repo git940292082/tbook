@@ -7,12 +7,16 @@
     <uses-sdk
         android:minSdkVersion="14"
         android:targetSdkVersion="18" />
-    <uses-permission  android:name="android.permission.INTERNET"/>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
     <application
+        android:name="com.zyj.tbools.App"
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:name="com.zyj.tbools.App"
         android:theme="@android:style/Theme.Light.NoTitleBar" >
         <activity
             android:name="com.zyj.tbools.activity.TbookActivity"
@@ -22,6 +26,12 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name="com.zyj.tbools.activity.BookDeatail" >
+        </activity>
+        <activity android:name="com.zyj.tbools.activity.LoginActivity" >
+        </activity>
+        <activity android:name="com.zyj.tbools.activity.RegisterActivity" >
         </activity>
     </application>
 

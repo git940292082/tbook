@@ -37,7 +37,7 @@
 
     </RelativeLayout>
 
-    <com.tarena.tbook.ui.CircleImageView
+    <com.zyj.tbools.ui.CircleImageView
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:id="@+id/ivPhoto"

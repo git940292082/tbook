@@ -20,6 +20,7 @@ public class App extends Application {
 	public static Context context;
 	public static RequestQueue queue;
 	public static List<Cart> carts;
+	public static Book book;
 	@Override
 	public void onCreate() {
 		super.onCreate();
@@ -32,7 +33,7 @@ public class App extends Application {
 		for (Cart cart : carts) {
 			if(book.equals(cart.getBook())){
 				cart.jia();
-				break;
+				return;
 			}
 		}
 		carts.add(new Cart(book, 1));

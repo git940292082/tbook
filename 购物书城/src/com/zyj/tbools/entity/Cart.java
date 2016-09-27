@@ -15,9 +15,8 @@ public class Cart implements Serializable{
 	}
 	
 	public double getQian() {
-		qian=book.getFixedPrice()*count;
+		qian=book.getDangPrice()*count;
 		return qian;
-		
 	}
 	public Cart() {
 		super();

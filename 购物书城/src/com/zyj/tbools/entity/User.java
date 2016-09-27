@@ -11,8 +11,7 @@ public class User {
 
 	private String lastLoginIp;
 
-	private int lastLoginTime;
-
+	private double lastLoginTime;
 	private String nickname;
 
 	private String password;

@@ -12,7 +12,8 @@
         android:id="@+id/ivDel"
         android:layout_gravity="center"
         android:layout_marginRight="10dp"
-        android:src="@drawable/cart_ico_del"/>
+        android:src="@drawable/cart_ico_del"
+        android:visibility="invisible"/>
 
 
     <ImageView

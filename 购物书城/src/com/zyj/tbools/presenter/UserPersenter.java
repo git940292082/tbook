@@ -1,10 +1,14 @@
 package com.zyj.tbools.presenter;
 
 import java.util.Map;
+
+import android.graphics.Bitmap;
+
 import com.zyj.tbools.entity.User;
 import com.zyj.tbools.model.IEntittyCallBack;
 import com.zyj.tbools.model.UserModel;
 import com.zyj.tbools.untils.GlobalConsts;
+import com.zyj.tbools.view.IImageCode;
 import com.zyj.tbools.view.ILoginView;
 import com.zyj.tbools.view.ILoginWithoutPwdView;
 import com.zyj.tbools.view.IRegisterView;
@@ -57,11 +61,26 @@ public class UserPersenter {
 				iLoginWithoutPwdView.loginWithoutPwdOk(ok);
 				
 			}
-			
 			@Override
 			public void loadDataError(String boj) {
 				// TODO Auto-generated method stub
 				iLoginWithoutPwdView.loginWithoutPwdOk(boj);
+			}
+		});
+	}
+	public void loadImageCode(final IRegisterView RegisterView){
+		model.ivCode(new IEntittyCallBack() {
+			@Override
+			public void loadDataOk(Object obj) {
+				// TODO Auto-generated method stub
+				Bitmap bitmap=(Bitmap) obj;
+				RegisterView.ImageCode(bitmap);
+			}
+			
+			@Override
+			public void loadDataError(String boj) {
+				// TODO Auto-generated method stub
+				RegisterView.registerErr("");
 			}
 		});
 	}

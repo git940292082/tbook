@@ -37,7 +37,7 @@
 
     </RelativeLayout>
 
-    <com.tarena.tbook.ui.CircleImageView
+    <com.zyj.tbools.ui.CircleImageView
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:id="@+id/ivPhoto"
@@ -158,7 +158,6 @@
         android:textColor="#ffffff"
         android:text="注册"
         android:id="@+id/btnLogin"
-        android:onClick="regist"
         android:layout_below="@+id/linearLayout3"
         />
 

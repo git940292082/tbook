@@ -32,7 +32,8 @@
         android:id="@+id/ivHeaderBackground"
         android:layout_below="@+id/relativeLayout"
         android:scaleType="centerCrop"
-        android:src="@drawable/ic_launcher"/>
+        android:background="#666"
+        />
 
     <ImageView
         android:layout_width="106dp"

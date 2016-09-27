@@ -16,7 +16,6 @@
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:id="@+id/ivPhoto"
-            android:onClick="doClick"
             android:src="@drawable/touxiang"
             android:layout_marginBottom="30dp"
             android:layout_alignParentBottom="true"
